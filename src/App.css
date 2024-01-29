@@ -5,38 +5,49 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* trzy kolumny o równej szerokości */
+  grid-gap: 10px;
+  /* opcjonalny odstęp między elementami */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.GridItem {
+  background-color: #4CAF50;
+  /* Kolor tła kafelka */
+  color: white;
+  /* Kolor tekstu */
+  border-radius: 10px;
+  /* Zaokrąglone rogi */
+  padding: 20px;
+  /* Wewnętrzny odstęp */
+  text-align: center;
+  /* Wyśrodkowanie tekstu */
+  font-size: 20px;
+  /* Rozmiar czcionki */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Cień kafelka */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.GridItem:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* Cień kafelka */  
+  transition: 0.3s;
+  /* Czas trwania efektu */
+  cursor: pointer;
+  /* Kursor podglądu */
+  background-color: #3e8e41;
+  /* Kolor tła kafelka po najechaniu */
+  color: white;
+  /* Kolor tekstu po najechaniu */
+  border-radius: 10px;
+  /* Zaokrąglone rogi po najechaniu */
+  
 }
 
-.card {
-  padding: 2em;
-}
+.GridItem:hover .child {
+  transform: rotate(25deg) scale(1.2); /* Obrót o 25 stopni podczas hoveru */
+  transition: 0.3s;
 
-.read-the-docs {
-  color: #888;
 }
