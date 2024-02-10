@@ -9,7 +9,8 @@ import { IoKeyOutline } from "react-icons/io5";
 import { FaTextWidth } from "react-icons/fa6";
 import { SiProtractor } from "react-icons/si";
 import { TbColorSwatch } from "react-icons/tb";
-import Calendar from './components/Elements/Calendar';
+import { MingcuteColorPickerFill } from './components/Icons/ColorPicker';
+import ColorPicker from './components/Apps/ColorPicker/ColorPicker';
 function App() {
 
   const testClick = () => {
@@ -31,11 +32,11 @@ function App() {
           <GridItem onclick={testClick}><FaTextWidth /></GridItem>
           <GridItem onclick={testClick}><SiProtractor /></GridItem>
           <GridItem onclick={testClick}><TbColorSwatch /></GridItem>
-
+          <GridItem onclick={testClick}><MingcuteColorPickerFill /></GridItem>
         </GridContainer>
-
-        <Calendar />
       </div>
+
+      <ColorPicker />
     </>
   )
 }
